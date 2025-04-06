@@ -66,3 +66,11 @@ The logon type describes how the user logged into the system. Common values incl
 10	RemoteInteractive (e.g., RDP logon)
 
 11	CachedInteractive (logon using cached credentials, such as when domain controller is unreachable)
+
+🖥️ Workstation
+This is the name of the workstation where the logon request originated, typically the computer name.
+
+🌐 Source IP
+This is the IP address from which the login attempt was made. Useful for identifying remote login attempts or lateral movement.
+Local logins may show this as ::1 (IPv6 localhost) or 127.0.0.1 (IPv4 localhost).
+Remote logins will display the actual IP address of the connecting device.
