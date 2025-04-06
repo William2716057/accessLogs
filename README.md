@@ -39,3 +39,23 @@ foreach ($event in $logonEvents) {
     Write-Host "----------------------------------------"
 }
 ```
+## 🔍 Field Explanations
+### 👤 User
+This shows the domain and account name of the user that logged in:
+```
+User: DOMAIN\Username
+```
+- AccountDomain: The domain (or local machine name) the user belongs to.
+- AccountName: The username used during the login.
+
+🔢 Logon Type
+The logon type describes how the user logged into the system. Common values include:
+
+2	Interactive (e.g., directly at keyboard/console)
+3	Network (e.g., accessing shared folders or remote desktop)
+4	Batch (e.g., scheduled tasks)
+5	Service (used by services like Windows Update)
+7	Unlock (a user unlocked their workstation)
+8	NetworkCleartext (network logon with plaintext credentials)
+10	RemoteInteractive (e.g., RDP logon)
+11	CachedInteractive (logon using cached credentials, such as when domain controller is unreachable)
